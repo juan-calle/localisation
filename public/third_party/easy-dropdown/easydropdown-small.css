@@ -1,0 +1,239 @@
+/* --- EAS.dropdown-small METRO THEME --- */
+
+/* PREFIXED CSS */
+
+.dropdown-small,
+.dropdown-small div,
+.dropdown-small li,
+.dropdown-small div::after,
+.dropdown-small .carat,
+.dropdown-small .carat:after,
+.dropdown-small .selected::after,
+.dropdown-small:after{
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+.dropdown-small .selected::after,
+.dropdown-small.scrollable div::after{
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	pointer-events: none;
+}
+
+/* WRAPPER */
+
+.dropdown-small{
+	position: relative;
+	width: 100%;
+	margin-top: 10%;
+	cursor: pointer;
+	font-weight: 200;
+	background: #111;
+	color: #fff;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.dropdown-small.open{
+	z-index: 1;
+	background: #111;
+}
+
+.dropdown-small:hover{
+	background: #C7001F;
+}
+
+.dropdown-small:after{
+	content: '';
+	position: absolute;
+	right: 3px;
+	bottom: 3px;
+	top: 2px;
+	width: 30px;
+	background: transparent;
+}
+
+.dropdown-small.focus:after{
+	background: #0180d1;
+}
+
+/* CARAT */
+
+.dropdown-small .carat,
+.dropdown-small .carat:after{
+	content: '';
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	border: 8px solid transparent;
+	z-index: 1;
+	
+	-webkit-transform-origin: 50% 20%;
+	-moz-transform-origin: 50% 20%;
+	-ms-transform-origin: 50% 20%;
+	transform-origin: 50% 20%;
+	
+}
+
+.dropdown-small .carat:after{
+	margin-top: -10px;
+	right: -8px;
+	border-top-color: #C7001F;
+}
+
+.dropdown-small.open .carat{
+	margin-top: -4px;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/* OLD SELECT (HIDDEN) */
+
+.dropdown-small .old{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+.dropdown-small select{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.dropdown-small.touch .old{
+	width: 100%;
+	height: 100%;
+}
+
+.dropdown-small.touch select{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+/* SELECTED FEEDBACK ITEM */ 
+.dropdown-small .selected{
+	border: 2px solid #C7001F;
+}
+
+.dropdown-small .selected,
+.dropdown-small li{
+	display: block;
+	font-size: 14px;
+	line-height: 1;
+	color: #fff;
+	padding: 5px 10px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.dropdown-small .selected::after{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 60px;
+	
+	border-radius: 0 2px 2px 0;
+}
+
+.dropdown-small:hover .selected::after{
+}
+
+/* DROP DOWN WRAPPER */
+
+.dropdown-small div{
+	position: absolute;
+	height: 0;
+	left: 0;
+	right: 0;
+	top: 100%;
+	background: #111;
+	overflow: hidden;
+	opacity: 0;
+	border: 2px solid #C7001F;
+	border-top: 0;
+}
+
+.dropdown-small:hover div{
+	background: #111;
+}
+
+/* Height is adjusted by JS on open */
+
+.dropdown-small.open div{
+	opacity: 1;
+	z-index: 3;
+}
+
+/* FADE OVERLAY FOR SCROLLING LISTS */
+
+.dropdown-small.scrollable div::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	
+	box-shadow: inset 0 -50px 30px -35px #f8f8f8;
+}
+
+.dropdown-small.scrollable:hover div::after{
+	box-shadow: inset 0 -50px 30px -35px #f4f4f4;
+}
+
+.dropdown-small.scrollable.bottom div::after{
+	opacity: 0;
+}
+
+/* DROP DOWN LIST */
+
+.dropdown-small ul{
+	position: absolute;
+	padding: 0;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+}
+
+.dropdown-small.scrollable.open ul{
+	overflow-y: auto;
+}
+
+/* DROP DOWN LIST ITEMS */
+
+.dropdown-small li{
+	list-style: none;
+	padding: 8px 12px;
+}
+
+/* .focus class is also added on hover */
+
+.dropdown-small li.focus{
+	background: #C7001F;
+	position: relative;
+	z-index: 3;
+	color: #fff;
+}
+
+.dropdown-small li.active{
+	background: #C7001F;
+	color: #fff;
+}

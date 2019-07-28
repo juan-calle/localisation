@@ -1,0 +1,84 @@
+/*-------------------------------------
+FRONTEND STYLE
+-------------------------------------*/
+.proddocs .doctype .doctype-link{
+	display: block;
+	width: 64px;
+	height: 61px;
+}
+
+.proddocs .doctype .zip{
+	background: url(img/zip.png) no-repeat;
+	background-size: contain;
+}
+
+.proddocs .doctype .pdf{
+	background: url(img/pdf.png) no-repeat;
+		background-size: contain;
+}
+
+.proddocs .doctype .exe{
+	background: url(img/exe.png) no-repeat;
+		background-size: contain;
+}
+
+.proddocs .doctype .dmg{
+	background: url(img/dmg.png) no-repeat;
+		background-size: contain;
+}
+
+.proddocs .doctype .quu{
+	background: url(img/quu.png) no-repeat;
+		background-size: contain;
+}
+
+#TB_overlay{
+	z-index: 99995;
+}
+#TB_window{
+	z-index: 99999;
+}
+#TB_ajaxContent{
+	margin-right: 0 !important;
+	width: 100% !important;
+}
+.eula-content{
+	height: 70%;
+	overflow-y: auto;
+	border: 1px solid #888;
+	background: #f1f1f1;
+	padding: 10px;
+}
+.eula-buttons{
+	text-align: right;
+	margin: 15px 0;
+}
+
+#eula_text{
+	display: none;
+}
+
+/* Product series download/docs list*/
+#products-downloads-list{
+	min-height: 200px;
+}
+#products-downloads-list ul{
+	font-family: Arial, sans-serif;
+	font-size: 1.1em;
+	font-weight: 600;
+	list-style-type: none;
+	width: 100%;
+}
+
+#products-downloads-list ul li{
+	display: block;
+	width: 100%;
+	padding: 5px 0;
+	border-bottom: 2px solid #C7001F;
+}
+
+#products-downloads-list ul li div{
+	display: inline-block;
+	width: 33.33333%;
+	float: left;
+}
